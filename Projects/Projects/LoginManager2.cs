@@ -22,9 +22,9 @@ namespace Projects
         {
             try
             {
-                MySqlConnection c = new MySqlConnection("Server=localhost; database=villageFund_db; UID=root; Pwd=root;");
+                MySqlConnection c = new MySqlConnection("Server=localhost; database=villagefund_db; UID=root; Pwd=root;");
 
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM villageFund_db.manager WHERE manPassword='" + this.text_manager.Text + "' ; ", c);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM villagefund_db.manager WHERE manPassword='" + this.text_manager.Text + "' ; ", c);
 
                 MySqlDataReader myReader;
                 c.Open();

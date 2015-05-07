@@ -11,17 +11,21 @@ using System.Windows.Forms;
 
 namespace Projects
 {
-    public partial class Add_Member : Form
+    public partial class 
+        Add_Member : Form
     {
         MySqlConnection c = new MySqlConnection("Server=localhost; database=villageFund_db; UID=root; Pwd=root;");
         MySqlCommand cmd = new MySqlCommand();
-        
+   
         public Add_Member()
         {
             InitializeComponent();
         }
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void MenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             Memumain main = new Memumain();
             main.Show();
@@ -184,13 +188,21 @@ namespace Projects
         }
 
 
-        private void Add_Member_Load(object sender, EventArgs e)
-        {
-            c.Open();
-            cmd.Connection = c;
-            loadData();
-        }
+         private void Add_Member_Load(object sender, EventArgs e)
+         {
+             c.Open();
+             cmd.Connection = c;
 
+             loadData();
+
+             MySqlDataReader DataReader;
+             cmd.CommandText = "SELECT * FROM member ORDER BY memID DESC LIMIT 1";
+             DataReader = cmd.ExecuteReader();
+             DataReader.Read();
+
+             showNo.Text = DataReader["memID"].ToString();
+             DataReader.Dispose();
+         }
         private void Add_Member_Unload(object sender, EventArgs e)
         {
             c.Close();
@@ -246,6 +258,9 @@ namespace Projects
             Print print = new Print();
             print.Show();
         }
+
+       
+    
 
 
       

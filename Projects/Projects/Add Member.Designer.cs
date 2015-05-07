@@ -344,6 +344,7 @@
             this.MenuToolStripMenuItem.Size = new System.Drawing.Size(92, 104);
             this.MenuToolStripMenuItem.Text = "หน้าแรก";
             this.MenuToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuToolStripMenuItem.Click += new System.EventHandler(this.MenuToolStripMenuItem_Click);
             // 
             // MemberToolStripMenuItem
             // 

@@ -117,7 +117,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_print = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -157,6 +157,7 @@
             this.but_submit_3.TabIndex = 221;
             this.but_submit_3.Text = "ตกลง";
             this.but_submit_3.UseVisualStyleBackColor = true;
+            this.but_submit_3.Click += new System.EventHandler(this.but_submit_3_Click);
             // 
             // label54
             // 
@@ -198,9 +199,9 @@
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.Location = new System.Drawing.Point(741, 320);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(65, 16);
+            this.label68.Size = new System.Drawing.Size(102, 16);
             this.label68.TabIndex = 217;
-            this.label68.Text = "ดอกเบี้ยเงินกู้";
+            this.label68.Text = "ดอกเบี้ยปันผลสมาชิก";
             // 
             // label69
             // 
@@ -265,6 +266,7 @@
             this.but_submit_1.TabIndex = 258;
             this.but_submit_1.Text = "ตกลง";
             this.but_submit_1.UseVisualStyleBackColor = true;
+            this.but_submit_1.Click += new System.EventHandler(this.but_submit_1_Click);
             // 
             // label27
             // 
@@ -619,6 +621,7 @@
             this.but_submit_2.TabIndex = 295;
             this.but_submit_2.Text = "ตกลง";
             this.but_submit_2.UseVisualStyleBackColor = true;
+            this.but_submit_2.Click += new System.EventHandler(this.but_submit_2_Click);
             // 
             // label1
             // 
@@ -997,15 +1000,15 @@
             this.groupBox3.TabIndex = 299;
             this.groupBox3.TabStop = false;
             // 
-            // button3
+            // bt_print
             // 
-            this.button3.BackgroundImage = global::Projects.Properties.Resources.print_icon;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(924, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 62);
-            this.button3.TabIndex = 296;
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_print.BackgroundImage = global::Projects.Properties.Resources.print_icon;
+            this.bt_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_print.Location = new System.Drawing.Point(924, 26);
+            this.bt_print.Name = "bt_print";
+            this.bt_print.Size = new System.Drawing.Size(64, 62);
+            this.bt_print.TabIndex = 296;
+            this.bt_print.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -1072,7 +1075,7 @@
             // 
             this.ShowDepositeToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowDepositeToolStripMenuItem.Name = "ShowDepositeToolStripMenuItem";
-            this.ShowDepositeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ShowDepositeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ShowDepositeToolStripMenuItem.Text = "ข้อมูลเงินฝาก";
             this.ShowDepositeToolStripMenuItem.Click += new System.EventHandler(this.ShowDepositeToolStripMenuItem_Click);
             // 
@@ -1080,7 +1083,7 @@
             // 
             this.AddDepositeToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDepositeToolStripMenuItem.Name = "AddDepositeToolStripMenuItem";
-            this.AddDepositeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AddDepositeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.AddDepositeToolStripMenuItem.Text = "ฝาก - ถอนเงิน";
             this.AddDepositeToolStripMenuItem.Click += new System.EventHandler(this.AddDepositeToolStripMenuItem_Click);
             // 
@@ -1178,7 +1181,7 @@
             this.BackgroundImage = global::Projects.Properties.Resources.background4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 601);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bt_print);
             this.Controls.Add(this.but_submit_2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -1367,7 +1370,7 @@
         private System.Windows.Forms.TextBox tb_loanInterest_2;
         private System.Windows.Forms.TextBox tb_princLoan_2;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_print;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;

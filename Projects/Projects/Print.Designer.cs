@@ -54,7 +54,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projects.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 114);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(716, 373);
+            this.reportViewer1.Size = new System.Drawing.Size(984, 425);
             this.reportViewer1.TabIndex = 0;
             // 
             // menuStrip1
@@ -69,7 +69,7 @@
             this.ออกจากระบบToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(740, 108);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 108);
             this.menuStrip1.TabIndex = 179;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -130,7 +130,7 @@
             // 
             this.ขอมมลเงนฝากToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ขอมมลเงนฝากToolStripMenuItem.Name = "ขอมมลเงนฝากToolStripMenuItem";
-            this.ขอมมลเงนฝากToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ขอมมลเงนฝากToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ขอมมลเงนฝากToolStripMenuItem.Text = "ข้อมูลเงินฝาก";
             this.ขอมมลเงนฝากToolStripMenuItem.Click += new System.EventHandler(this.ขอมมลเงนฝากToolStripMenuItem_Click);
             // 
@@ -138,7 +138,7 @@
             // 
             this.ฝากถอนเงนToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ฝากถอนเงนToolStripMenuItem.Name = "ฝากถอนเงนToolStripMenuItem";
-            this.ฝากถอนเงนToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ฝากถอนเงนToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.ฝากถอนเงนToolStripMenuItem.Text = "ฝาก - ถอนเงิน";
             this.ฝากถอนเงนToolStripMenuItem.Click += new System.EventHandler(this.ฝากถอนเงนToolStripMenuItem_Click);
             // 
@@ -235,7 +235,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projects.Properties.Resources.background4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(740, 511);
+            this.ClientSize = new System.Drawing.Size(1008, 601);
+            this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Print";
