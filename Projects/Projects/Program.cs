@@ -16,7 +16,7 @@ namespace Projects
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Print());
+            Application.Run(new Add_Employee());
         }
     }
 }

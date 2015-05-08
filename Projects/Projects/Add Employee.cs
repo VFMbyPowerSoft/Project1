@@ -56,7 +56,7 @@ namespace Projects
             this.Close();
         }
 
-
+        
         private void but_save_Click(object sender, EventArgs e)
         {
 
@@ -69,18 +69,18 @@ namespace Projects
 
                     cmd.CommandText = @"INSERT INTO employee(empID,empTitle,empName,empLastname,empNoID,empUsername,empPassword,empHouseNo,
                                         empVillage,empVillageNo,empSubdistrict,empDistrict,empProvince,empDay,empStatus,empTime)
-                                        VALUES('" + this.empID.Text
+                                        VALUES('" + this.empID.Text 
                                                   + "','" + this.com_num.SelectedItem
                                                   + "','" + this.empName.Text
                                                   + "','" + this.empLastname.Text
                                                   + "','" + this.empNoID.Text
-                                                  + "','" + this.empUsername.Text
+                                                  + "','" + this.empUsername.Text 
                                                   + "','" + this.empPassword.Text
-                                                  + "','" + this.empHouseNo.Text
+                                                  + "','" + this.empHouseNo.Text 
                                                   + "','" + this.empVillage.Text
-                                                  + "','" + this.empVillageNo.Text
+                                                  + "','" + this.empVillageNo.Text 
                                                   + "','" + this.empSubdistrict.Text
-                                                  + "','" + this.empDistrict.Text
+                                                  + "','" + this.empDistrict.Text 
                                                   + "','" + this.empProvince.Text
                                                   + "','" + this.empdateTime.Value.Date.ToString("yyyy-MM-dd HH:mm")
                                                   + "','" + this.com_status.SelectedItem
@@ -143,27 +143,27 @@ namespace Projects
 
         private void but_edit_Click(object sender, EventArgs e)
         {
-            /*  DateTime time = DateTime.Now;
-              string time_started = time.ToString("hh:mm:ss dd-MM-yyyy");
+          /*  DateTime time = DateTime.Now;
+            string time_started = time.ToString("hh:mm:ss dd-MM-yyyy");
 
 
-              cmd.CommandText = @"UPDATE employee
-                                  SET empTitle = '" + this.com_num.SelectedItem + "',empName = '" + this.empName.Text + "', empLastname = '" + this.empLastname.Text
-                                                   + "',empNoID = '" + this.empNoID.Text + "',empUsername = '" + this.empUsername.Text
-                                                   + "',empPassword = '" + this.empPassword.Text + "',empHouseNo = '" + this.empHouseNo.Text
-                                                   + "',empVillage = '" + this.empVillage.Text + "',empVillageNo = '" + this.empVillageNo.Text
-                                                   + "',empSubdistrict = '" + this.empSubdistrict.Text + "',empDistrict = '" + this.empDistrict.Text
-                                                   + "',empProvince = '" + this.empProvince.Text + "',empPostalcode = '" + this.empPostalcode.Text
-                                                   + "',empcomday = '" + this.com_day.SelectedItem + "',empcommonth = '" + this.com_month.SelectedItem
-                                                   + "',empYear = '" + this.empYear.Text + "',empPostalcode = '" + this.com_status.SelectedItem
-                                                   + "',empTime = '" + time_started
-                            + "' WHERE empNoID = '" + empNoID.Text + "' ";
+            cmd.CommandText = @"UPDATE employee
+                                SET empTitle = '" + this.com_num.SelectedItem + "',empName = '" + this.empName.Text + "', empLastname = '" + this.empLastname.Text
+                                                 + "',empNoID = '" + this.empNoID.Text + "',empUsername = '" + this.empUsername.Text
+                                                 + "',empPassword = '" + this.empPassword.Text + "',empHouseNo = '" + this.empHouseNo.Text
+                                                 + "',empVillage = '" + this.empVillage.Text + "',empVillageNo = '" + this.empVillageNo.Text
+                                                 + "',empSubdistrict = '" + this.empSubdistrict.Text + "',empDistrict = '" + this.empDistrict.Text
+                                                 + "',empProvince = '" + this.empProvince.Text + "',empPostalcode = '" + this.empPostalcode.Text
+                                                 + "',empcomday = '" + this.com_day.SelectedItem + "',empcommonth = '" + this.com_month.SelectedItem
+                                                 + "',empYear = '" + this.empYear.Text + "',empPostalcode = '" + this.com_status.SelectedItem
+                                                 + "',empTime = '" + time_started
+                          + "' WHERE empNoID = '" + empNoID.Text + "' ";
 
-              MessageBox.Show("edit");
-              cmd.ExecuteNonQuery();
-              MessageBox.Show("edit2");
-              loadData();  
-             */
+            MessageBox.Show("edit");
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("edit2");
+            loadData();  
+           */
         }
 
         private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -183,10 +183,10 @@ namespace Projects
             empProvince.Text = dataGridView1.Rows[e.RowIndex].Cells["จังหวัด"].Value.ToString();
             //empdateTime.Value.Date.ToString("yyyy-MM-dd") = dataGridView1.Rows[e.RowIndex].Cells["วันเดือนปีเกิด"].Value.ToString();
             com_status.SelectedItem = dataGridView1.Rows[e.RowIndex].Cells["สถานภาพ"].Value.ToString();
-
+            
         }
 
-
+        
         private void Add_Employee_Load(object sender, EventArgs e)
         {
             c.Open();
@@ -226,14 +226,13 @@ namespace Projects
             // empdateTime.Value = ();      
             com_status.Text = "การทำงาน";
         }
-        private void loadData()
-        {
+        private void loadData(){
             MySqlDataReader Reader;
             cmd.CommandText = @"SELECT empID AS'รหัสพนักงาน',empTitle AS'คำนำหน้านาม',empName AS'ชื่อ',empLastname AS'นามสกุล',
                                 empNoID AS'เลขบัตรประชาชน',empUsername AS'ผู้ใช้ระบบ',empPassword AS'รหัสผ่าน',empHouseNo AS'บ้านเลขที่',
                                 empVillage AS'หมู่บ้าน',empVillageNo AS'หมู่ที่',empSubdistrict AS'ตำบล',empDistrict AS'อำเภอ',
                                 empProvince AS'จังหวัด',empDay AS'วันเดือนปีเกิด',empStatus AS'สถานภาพ',empTime AS'เวลาที่บันทึก' FROM employee";
-
+            
             //cmd.CommandText = "SELECT * FROM employee";
             Reader = cmd.ExecuteReader();
 
@@ -243,10 +242,10 @@ namespace Projects
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = dataTable;
             dataGridView1.Refresh();
-
+           
         }
 
-        private void but_print_Click(object sender, EventArgs e)
+         private void but_print_Click(object sender, EventArgs e)
         {
             this.Hide();
             Print print = new Print();
